@@ -1,0 +1,190 @@
+/*
+INFO: 
+	project: gift on map
+	browsers: weblit
+	width: 
+	columns: 
+	markup: Sergey Kalinin 01/2015 (prozaik81-2@yandex.ru)
+	use: 
+	desc: 	gift on map for all iphones
+	version 1
+	
+COLORS:
+	text basic: #000
+
+TABLE OF CONTENTS:
+	FONTS
+	COMMON_STYLES
+	GLOBAL_layout
+	GLOBAL_blocks	
+	MEDIA QUERIES
+	PLUGINS	& WIDJETS
+*/
+
+/*************************************************************************************************************** FONTS */
+/* fs */
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto_regular/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto_regular/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto_regular/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto_regular/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto_regular/roboto-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto_light/roboto-light-webfont.eot');
+    src: url('../fonts/roboto_light/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto_light/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto_light/roboto-light-webfont.woff') format('woff'),
+         url('../fonts/roboto_light/roboto-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*************************************************************************************************************** COMMON_STYLES */
+html, body, div, h1, h2, h3, h4, h5, h6, a, a img, p, ul, ol, li, span, fieldset , form, dl, dd, dt, table, tr, td, img{ 
+	border: none;
+	margin: 0; 
+	outline: none;	
+	padding: 0;
+}
+
+html{
+    height:100%;	
+}
+
+body{	
+    height:100%;	
+
+}	
+
+ul{
+	list-style-type: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus { outline: none; }
+
+textarea{
+	resize: none;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	zoom:1;
+}
+
+.clear{
+	clear: both;
+}	
+	
+.hide{
+	display: none !important;
+}
+
+
+
+/*************************************************************************************************************** GLOBAL_layout */
+.wrap{
+	min-height: 100%;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+}	
+	
+	.wrap .header{
+		overflow: hidden;
+	}
+
+		.wrap .header .map{
+			display: block;
+			width: 100%;
+		}	
+
+	.wrap .content{
+		overflow: hidden;
+	}	
+	
+/*************************************************************************************************************** GLOBAL_blocks : content */
+.content{
+	padding: 30px 30px 60px;
+
+	font: 30px/46px 'robotoregular', arial, sans-serif;
+}
+
+	.content .h1{
+		font-family: 'robotolight', arial, sans-serif;
+		font-size: 44px;
+		line-height: 68px;
+		font-weight: 100;
+
+		padding-bottom: 30px;
+	}
+
+
+	.content .punkts{
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+
+		.punkts .link_outer:first-child{
+			width: 100%;
+		}
+
+		.punkts .link_outer{
+			display: block;
+			width: 50%;
+			float: left;
+
+		}
+
+			.punkts .link_outer .link{
+				background: url('../images/1x/icon_map_active.png') left center no-repeat;
+				padding-left: 60px;
+				min-height: 50px;
+				display: block;
+				margin-bottom: 10px;
+				margin-left: 15px;
+
+				font-size: 36px;
+				line-height: 60px;
+			}
+
+			.punkts .link_outer:nth-child(2) .link{
+				background: url('../images/1x/icon_top_active.png') left center no-repeat;
+			}
+
+			.punkts .link_outer:nth-child(3) .link{
+				background: url('../images/1x/icon_about_active.png') left center no-repeat;
+			}		
+
+	.content .body{
+		font-size: 32px;
+
+		overflow: hidden;
+	}
+
+
+/*************************************************************************************************************** MEDIA QUERIES */
+@media (min-width: 1000px) { 
+	.wrap{
+		width: 400px;
+	}	
+
+	.punkts .link_outer .link {
+		font-size: 17px;
+	}		
+
+	.content .h1{
+		line-height: 50px;	
+}
